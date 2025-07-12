@@ -1,0 +1,19 @@
+<app-header></app-header>
+<app-navigation-bar></app-navigation-bar>
+<div class="accord"> 
+    <div class="paymentBg">
+        <div class="container">
+            <h3>Payment Page</h3><br>
+            <form [formGroup]="paymentData" (ngSubmit)="onSubmit()" [action]="'http://test.sbiepay.sbi/secure/AggregatorHostedListener'" ngNoForm method="POST">
+                <div class="row">
+                    <div col-sm-12>
+                        <label>Post Applying For</label>:<label> UPPRPB Police</label>
+                        <br>
+                        <label>Amount to be Paid</label>:<label> 5rs.</label>
+                    </div>
+                </div>
+                <button class="btn-custom" type="submit">Proceed To Payment</button>
+            </form>
+        </div>
+    </div>    
+</div>

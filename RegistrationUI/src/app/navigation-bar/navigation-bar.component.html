@@ -1,0 +1,12 @@
+<html>
+<body>
+<div class="navbar">
+    <a [routerLink] ="'/instructions'">Home</a>
+    <a [routerLink] ="'/dashboard'">Dashboard</a>
+    <a *ngIf="showPersonalNav" [routerLink] ="'/personal'">Application</a>
+    <a [routerLink] ="'/showData'">View</a> 
+    <a [routerLink] ="'/payment'">Payment</a>
+  </div>
+  <router-outlet></router-outlet>
+</body>
+</html>

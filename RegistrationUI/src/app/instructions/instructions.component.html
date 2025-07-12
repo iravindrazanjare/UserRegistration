@@ -1,0 +1,196 @@
+<app-header></app-header>
+<app-navigation-bar></app-navigation-bar>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Change Password</h4>
+      </div>
+      <div class="modal-body">
+        <p>First Time Change Password. @#$%^ are allowed</p>
+        <form [formGroup]="forgotPassword">
+            <div class="row">
+                 <div class="col-sm-12">
+                     <div class="form-group">
+                         <label class="control-label">Current Password</label>
+                         <input type="text" placeholder="Enter Current Password" class="form-control" maxlength="20" name="current_pass" required="required" formControlName="current_pass" id="current_pass" autocomplete="off">
+                     </div>
+                 </div>
+                 <div class="col-sm-12">
+                     <div class="form-group">
+                         <label class="control-label">New Password</label>
+                         <input type="text" placeholder="Enter New Password" class="form-control" maxlength="20" name="new_pass" required="required" formControlName="new_pass" id="new_pass" autocomplete="off">
+                     </div>
+                 </div>
+                 <div class="col-sm-12">
+                     <div class="form-group">
+                         <label class="control-label">Confirm New Password</label>
+                         <input type="text" placeholder="Enter Confirm Password" class="form-control" maxlength="20" name="confirm_pass" required="required" formControlName="confirm_pass" id="confirm_pass" autocomplete="off">
+                     </div>
+                 </div>
+             </div>
+         </form>    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" 
+        (click)="updatePassword()">
+  Update
+</button>
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="accord"> 
+    <div class="personalBg">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="pageTitle text-center"> Uttar Pradesh Police Recruitment and Promotion Board </h1>
+        <h3 class="secondH3 text-center"> Uttar Pradesh Police Recruitment Eligibility Test 2022</h3>
+        <p class="mt20 text-center font16 WeightBold"> Instructions to the candidates "How to Apply" through online </p>
+    </div>
+</div>
+<div class="row mt20">
+    <div class="col-sm-12">
+        <p>The candidates who are applying for this recruitment can use their current & active E-Mail ID & Mobile Number. Those who are not having e-mail ID and Mobile No. should create an E-Mail ID and have a Mobile Number.</p>
+        <p class="mt20"><strong>Important Note 1: </strong>Candidates should fill all the mandatory fields which are marked with <span class="manadetory-fields">*</span> mark.</p>
+        <p class="mt20 tamil"> Click Here to download Instructions in  Tamil
+            </p>
+        <p class="mt20"><strong>Important Note 2: </strong>Candidates can download the  instructions given below in Tamil by clicking the link <strong>&ldquo;Click Here to download Instructions in  Tamil&rdquo;</strong>.</p>
+        <h2 class="mt20 font14 WeightBold tamil">
+            NEW USER: </h2>
+        <ol class="instructionsUl">
+            <li>Candidate needs to select the TET Paper I or Paper II for which the candidate wants to apply and provide basic personal information during new user signup process. Candidate also needs to validate his/her E-Mail ID and Mobile No. via OTP process.</li>
+            <li>After providing the mandatory details, candidate needs to click the<strong> &quot;SUBMIT&quot; </strong>button in the 'new user sign up' form.</li>
+            <li>On successful submission, User ID &amp; Password will be created and displayed to the user on screen, the User ID along with password will be sent to the candidate's E-Mail ID and Mobile No. The candidate should enter his/her User ID and password in the login page and click the login button to complete the login process. On first successful login, Candidate must change their password. </li>
+            <li>After that, an instruction page will appear. After reading the instructions thoroughly, the candidate needs to give <strong>&quot;DECLARATION&quot;</strong> by selecting the checkbox shown in the screen. Then click the<strong> &quot;CONTINUE&quot; </strong>button to proceed further. </li>
+            <li>Now, the Application for Teacher Eligibility Test 2019 page will appear on the screen. </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold"> <span class="tamil">
+            </span> APPLICATION FORM CONSISTS OF THE FOLLOWING SECTIONS: </h2>
+        <ol class="instructionsUl">
+            <li>
+                <p>Personal Details</p>
+            </li>
+            <li>
+                <p>Educational Qualification</p>
+            </li>
+            <li>
+                <p>Upload Photo</p>
+            </li>
+            <li>
+                <p>Upload Signature</p>
+            </li>
+            <li>
+                <p>Preview</p>
+            </li>
+            <li>
+                <p>Declaration</p>
+            </li>
+            <li>
+                <p>Payment section </p>
+            </li>
+            <li>
+                <p>Downloading of application forms </p>
+            </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold"> <span class="tamil">
+            </span> PERSONAL DETAILS : </h2>
+        <ol class="instructionsUl">
+            <li>
+                <p>In the personal details page, candidate should enter his/her Nativity and Gender. Upon selecting the Gender, a confirmation box will pop up. Click OK to confirm the candidate's gender. The candidate should fill his/her Permanent Address and Communication Address in the respective fields.</p>
+            </li>
+            <li>
+                <p>The Candidate should select the Preferred Educational Districts for <br />
+                    Written Test from the dropdown menu.</p>
+            </li>
+            <li>
+                <p>If the candidate clicks <strong>&quot;Yes&quot; </strong>against the question &quot;Do you possess community certificate issued by Tamil Nadu Govt.?&quot;, then the community list will appear in the Community drop down box.  Here the candidate has to select his /her community.</p>
+            </li>
+            <li>
+                <p>If he/she clicks<strong> &quot;No&quot; </strong>against the question &quot;Do you possess community certificate issued by Tamil Nadu Govt.?&quot; then OC will appear in the Community field by default.</p>
+            </li>
+            <li>
+                <p>The candidate should fill his/her Religion and Community details.</p>
+            </li>
+            <li>
+                <p>Once all the mandatory fields of the 'Personal Details page' are entered, click the<strong> &quot;Save &amp; Continue&quot;</strong> button to proceed further and to fill the <strong>&quot;EDUCATIONAL QUALIFICATION&quot;.</strong></p>
+            </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold">EDUCATIONAL QUALIFICATION: </h2>
+        <ol class="instructionsUl">
+            <li>Here the candidate should fill his/her educational qualification details in the table provided and also provide the details with reference to the Optional Language and Optional Subject (Only for Paper II). <br />
+            </li>
+            <li>Then click<strong> &quot;SAVE &amp; CONTINUE&quot; </strong>button and then <strong>&quot;Upload Photo&quot;</strong> tab will appear on the screen. </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold"> UPLOAD PHOTO: </h2>
+        <ol class="instructionsUl">
+            <li>
+                <p>Here, his/her User ID, Name, Gender and DOB will appear automatically on the screen.</p>
+            </li>
+            <li>
+                <p>The candidate should upload his / her scanned image of recently taken passport size photograph (allowed size 20 kb to 60 kb; allowed format JPG, JPEG, BMP or PNG).</p>
+            </li>
+            <li>
+                <p>Then the candidate should click the <strong>&quot;CHOOSE FILE&quot;</strong> button and upload the photograph.</p>
+            </li>
+            <li>
+                <p>After uploading the photo, the candidate should click the <strong>&quot;CONTINUE&quot; </strong>button.  Then the<strong> &quot;UPLOAD SIGNATURE&quot; </strong>section will appear.</p>
+            </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold">UPLOAD SIGNATURE:</h2>
+        <ol class="instructionsUl">
+            <li>Here, his/her User ID, Name, Gender and DOB will appear automatically on the screen.</li>
+            <li>The candidate should upload his / her scanned signature image (allowed size 10 kb to 30 kb; allowed format JPG, JPEG, BMPor PNG).</li>
+            <li>Then the candidate should click the <strong>&quot;CHOOSE FILE&quot;</strong> button and upload the signature. </li>
+            <li>After uploading the signature, the candidate should click the <strong>&quot;CONTINUE&quot;</strong> button. </li>
+            <li> After completing all the process,<strong> &quot;Preview&quot; </strong>section will appear. </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold">  PREVIEW :</h2>
+        <ol class="instructionsUl">
+            <li>In this section, all the details filled in the application form will be displayed in a single page with <strong>&quot;Edit&quot; </strong>options for the respective sections.  If the candidate wants to edit his/her application, he / she can click the <strong>&quot;Edit&quot;</strong> link against the particular section and 'modify or update' the details.</li>
+            <li>Now the Application Form will be displayed in a single page with <strong>&quot;PROCEED TO SUBMIT FORM&quot; </strong>button at the end.</li>
+            <li>On clicking the <strong>&quot;SUBMIT APPLICATION FORM&quot;</strong> button, the <strong>&quot;Declaration&quot; </strong>pop up box will open. After enabling the checkbox, Click <strong>&quot;SUBMIT&quot;</strong> button to complete the application process.</li>
+            <li>Once the <strong>&quot;SUBMIT&quot;</strong> button was clicked, the candidate will not be able to <strong>change</strong> any of the details in the submitted application.</li>
+            <li>Finally, the page moves to the payment section. </li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold">  PAYMENT SECTION (VIA PAYMENT GATEWAY) :</h2>
+        <ol class="instructionsUl">
+            <li>A page mentioning the test applied and the amount of Fee Rs. 500/250 for candidates will appear on the screen. On clicking the<strong> &quot;Proceed to Pay&quot; </strong>button, system will be redirected to the Payment Gateway page. In the redirected page, Candidate has to select the payment mode to initiate the payment.<br />
+                In the Payment Gateway page, the following payment mode options are available<br />
+                a) Net banking b) Credit Card c) Debit card<br />
+                <strong>The candidate is restricted to Pay the Fee through Online (Net banking /Debit card/Credit Card) mode only. </strong></li>
+            <li>If the transaction gets failed after initiating the payment process for unknown reasons, the candidate can initiate payment transaction again. </li>
+            <li>On successful payment through online, the candidate can check the payment status in their dashboard and can download their Application &amp; Payment receipt. </li>
+            <li><strong>Refund and Cancellation policy</strong></li>
+            <li>Any request for cancellations or refund for fees paid on the website shall not be entertained under any circumstances. However, if the amount is debited more than once due to technical issues, excess amount will be refunded within the TAT as specified by banks.</li>
+        </ol>
+        <h2 class="mt20 font14 WeightBold">  DOWNLOADING OF FILLED-IN APPLICATION FORM:</h2>
+        <ol class="instructionsUl">
+            <li>
+                <p>The candidate needs to click the <strong>&ldquo;APPLICATION  FORM&rdquo;</strong> link in the candidate&rsquo;s dashboard to download the filled-in  application form.</p>
+            </li>
+        </ol>
+    </div>
+<p class="subheading">Declaration</p>
+<table>
+<tr>
+<td style="display:inline-block; width:20px; margin-top:2px;">
+    </td>
+<td><p>I have fully read and understood the notification / advertisement and instructions for online application of TNTET   2019 before filling the application form and I hereby accept all the rules and norms prescribed for the same.</p></td>
+</tr>
+</table>
+</div>
+<button (click)="continueToPersonal()" class="btn-custom">Continue</button>
+</div>
+</div>
+</div>

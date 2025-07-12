@@ -1,0 +1,38 @@
+.container {   
+    padding: 55px;   
+    background-color: #040657;  
+    width: 100%;
+    margin-top: 2em;
+    margin-right: 100px;
+    margin-left : 90px;
+    overflow-x: hidden;
+
+}
+.photoUploadBg{
+    background: url(/assets/images/bg.png);
+    border: 2px solid;
+    color: rgb(219, 216, 216);
+    background-repeat: no-repeat;
+}
+.list-group-item{
+    border-color: black;
+    border: 2px solid;
+    overflow-x: hidden;
+    width: min-content;
+    background: url(/assets/images/bg.png);
+}  
+.imagePanel{
+    text-align: center;
+    margin-right: 500px;
+}
+.btn-custom{
+    background: #4a9999;
+    color: #fff;
+    padding: 6px 5px;
+    cursor: pointer;
+    width: 25%;
+    border-radius: 10px;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    margin: 10px 0px 10px 775px;  
+}

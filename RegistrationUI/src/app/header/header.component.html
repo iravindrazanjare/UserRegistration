@@ -1,0 +1,24 @@
+<style>
+.takeright {
+    margin-top: 5px;
+}
+
+</style>
+<div class="row">
+    <div class ="col-sm-6">
+        <img src="assets/images/logo.png" alt="Logo of Client">
+        <h3>Uttar pradesh Police Portal</h3>
+    </div>
+    <div class ="col-sm-3"></div>
+    <div class = "col-sm-3">{{ rxTime | date: 'dd-MM-YYYY hh:mm:ss a' }}
+    <div ngbDropdown class="d-inline-block">
+            <div class="takeright">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Action Menu</button>
+            </div>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem (click)="openModal()">Change Password</button>
+            <button ngbDropdownItem (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>

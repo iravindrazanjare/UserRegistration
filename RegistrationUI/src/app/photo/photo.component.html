@@ -1,0 +1,72 @@
+<app-header></app-header>
+<app-navigation-bar></app-navigation-bar>
+      <div class="accord"> 
+        <div class="photoUploadBg">
+            <div class="container">
+                <h3>Photograph Upload</h3>
+                <form [formGroup]="photoUpload" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="control-label">First Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="user.first_name" formControlName="first_name" readonly="true"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="control-label">Mobile Number</label>
+                                    <input type="text" class="form-control" [(ngModel)]="user.mobileNo" formControlName="mobileNo" readonly="true"/>
+                                </div>
+                            </div>
+                            <div><img [src]="url" *ngIf="url"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="control-label">Gender</label>
+                                    <input type="text" class="form-control" [(ngModel)]="user.gender" formControlName="gender" readonly="true"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="control-label">Mobile Number</label>
+                                    <input type="text" class="form-control" [(ngModel)]="user.email_id" formControlName="email_id" readonly="true"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                <div class="imagePanel">
+                    <ul class="list-group list-group-flush" *ngFor="let file of fileInfos | async">
+                      <li class="list-group-item">
+                        <img [src]="file.url" style="width:120px;height:150px;"><br>
+                        <a href="{{ file.url }}">{{ file.name }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                <div *ngIf="currentFile" class="progress">
+                    <div
+                      class="progress-bar progress-bar-info progress-bar-striped"
+                      role="progressbar"
+                      attr.aria-valuenow="{{ progress }}"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      [ngStyle]="{ width: progress + '%' }"
+                    >
+                      {{ progress }}%
+                    </div>
+                  </div>
+                  
+                  <label class="btn btn-default">
+                    <input type="file" (change)="selectFile($event)" />
+                  </label>
+                  
+                  <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
+                    Upload
+                  </button>
+                  <div *ngIf="currentFile" class="alert alert-light" role="alert">{{ message }}</div>
+                  <button (click)="updateCandidateStage()" class="btn-custom">Save and Continue</button>
+                </form> 
+                </div>
+        </div>
+      </div>
+      

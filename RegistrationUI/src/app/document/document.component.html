@@ -1,0 +1,50 @@
+<app-header></app-header>
+<app-navigation-bar></app-navigation-bar>
+
+<div class="accord"> 
+    <div class="photoUploadBg">
+        <div class="container">
+            <h3>Document Upload</h3><br>
+            <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div col-sm-6>
+                        <label style= "margin-left: 2em;" >SSC Marksheet</label>
+                    </div>
+                    <div col-sm-4>
+                        <input style= "margin-left: 19em;" type="file" id="file[0]" (change)="handleFileInput1($event)">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div col-sm-6>
+                        <label style= "margin-left: 2em;">HSC Marksheet</label>
+                    </div>
+                    <div col-sm-6>
+                <input style= "margin-left: 19em;" type="file" id="file[1]" (change)="handleFileInput2($event)">
+            </div>
+                </div><br>
+                <div class="row">
+                    <div col-sm-6>
+                        <label style= "margin-left: 2em;">Graduation Marksheet</label>
+                    </div>
+                    <div col-sm-6>
+                <input style= "margin-left: 250px;" type="file" id="file[2]" (change)="handleFileInput3($event)">
+            </div>
+                </div><br>
+                <div class="row">
+                    <div col-sm-6>
+                        <label style= "margin-left: 2em;">Caste Certificate</label>
+                    </div>
+                    <div col-sm-6>
+                <input style= "margin-left: 295px;" type="file" id="file[3]" (change)="handleFileInput4($event)">
+            </div>
+                 
+                </div>
+                 <div fxLayout="row" fxLayoutAlign="left">
+                    <button class="btn-custom" type="submit">Upload All Files</button>
+                </div>
+            </form>
+            <div *ngIf="message != null && message != ''" class="alert alert-light" role="alert">{{ message }}</div>
+        </div>
+        <button (click)="updateCandidateStage()" class="btn-custom">Save and Continue</button>
+    </div>
+</div>    
